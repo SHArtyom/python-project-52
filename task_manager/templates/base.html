@@ -30,17 +30,34 @@
           <li class="nav-item">
             <a class="nav-link" href="/users/">{% translate 'Users' %}</a>
           </li>
-
         </ul>
         <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="/statuses/">{% translate 'Statuses' %}</a>
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="/labels/">{% translate 'Labels' %}</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/tasks/">{% translate 'Tasks' %}</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/logout/">{% translate 'Logout' %}</a>
+            </li>
+
+            {% else %}
             <li class="nav-item">
               <a class="nav-link" href="/login/">{% translate 'Enter' %}</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/users/create/">{% translate 'Register' %}</a>
             </li>
-
+            {% endif %}
         </ul>
       </div>
     </nav>

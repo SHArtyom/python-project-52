@@ -1,0 +1,32 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "first_name": "Wednesday",
+      "last_name": "Addams",
+      "username": "WAddams",
+      "password": "@DDaMs"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+    "first_name": "Fester",
+    "last_name": "Addams",
+    "username": "FAddams",
+    "password": "@DDaMs"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+    "first_name": "Pugsley",
+    "last_name": "Addams",
+    "username": "PAddams",
+    "password": "@DDaMs"
+    }
+  }
+]
