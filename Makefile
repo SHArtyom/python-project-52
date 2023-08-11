@@ -6,6 +6,9 @@ lint:
 install:
 	poetry install
 
+tests:
+	@$(MANAGE) test
+
 dev:
 	@$(MANAGE) runserver
 
