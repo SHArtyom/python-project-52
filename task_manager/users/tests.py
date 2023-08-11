@@ -97,7 +97,7 @@ class TestCreateUser(UserTestCase):
         self.assertEqual(User.objects.count(), self.count)
 
     def test_create_password_missing(self):
-        user_data = self.test_user['create_test']['password_missing_user'].copy()
+        user_data = self.test_user['create_test']['no_password_user'].copy()
         response = self.client.post(reverse_lazy('sign_up'), data=user_data)
         errors = response.context['form'].errors
         error_help = _('This field is required.')
@@ -109,7 +109,7 @@ class TestCreateUser(UserTestCase):
         self.assertEqual(User.objects.count(), self.count)
 
     def test_create_password_dont_match(self):
-        user_data = self.test_user['create_test']['password_mistype_user'].copy()
+        user_data = self.test_user['create_test']['typo_password_user'].copy()
         response = self.client.post(reverse_lazy('sign_up'), data=user_data)
         errors = response.context['form'].errors
         self.assertIn('password2', errors)
@@ -120,7 +120,7 @@ class TestCreateUser(UserTestCase):
         self.assertEqual(User.objects.count(), self.count)
 
     def test_create_password_too_short(self):
-        user_data = self.test_user['create_test']['password_short_user'].copy()
+        user_data = self.test_user['create_test']['short_password_user'].copy()
         response = self.client.post(reverse_lazy('sign_up'), data=user_data)
         errors = response.context['form'].errors
         self.assertIn('password2', errors)
@@ -142,7 +142,7 @@ class TestUpdateUser(UserTestCase):
         self.assertRedirects(response, reverse_lazy('users'))
         self.assertEqual(User.objects.count(), self.count)
         self.assertEqual(User.objects.get(id=self.user2.id).first_name,
-            user_data['first_name'])
+                         user_data['first_name'])
 
     def test_update_other(self):
         self.client.force_login(self.user1)

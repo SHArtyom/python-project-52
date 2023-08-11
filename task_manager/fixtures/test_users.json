@@ -28,21 +28,21 @@
       "password1": "@DDaMs",
       "password2": "@DDaMs"
     },
-    "password_missing_user": {
+    "no_password_user": {
       "username": "Buttler",
       "first_name": "Lurch",
       "last_name": "Lurch",
       "password1": "",
       "password2": ""
     },
-    "password_mistype_user": {
+    "typo_password_user": {
       "username": "Buttler",
       "first_name": "Lurch",
       "last_name": "Lurch",
       "password1": "@DDaMs",
       "password2": "ADDaMs"
     },
-    "password_short_user": {
+    "short_password_user": {
       "username": "Buttler",
       "first_name": "Lurch",
       "last_name": "Lurch",
