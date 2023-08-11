@@ -1,3 +1,5 @@
+MANAGE := poetry run python manage.py
+
 lint:
 	poetry run flake8 task_manager
 
@@ -5,11 +7,15 @@ install:
 	poetry install
 
 dev:
-	poetry run python manage.py runserver
+	@$(MANAGE) runserver
 
-migrate:
-	poetry run python manage.py makemigrations
-	poetry run python manage.py migrate
+make-migration:
+	@$(MANAGE) makemigrations
+
+migrate: make-migration
+	@$(MANAGE) migrate
+
+build: install migrate
 
 PORT ?= 8000
 start:
