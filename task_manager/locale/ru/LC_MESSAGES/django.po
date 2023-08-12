@@ -338,7 +338,7 @@ msgstr "Удалить пользователя"
 
 #: .\task_manager\views.py:19
 msgid "You are logged in"
-msgstr "Вы авторизованы"
+msgstr "Вы залогинены"
 
 #: .\task_manager\views.py:21
 msgid "Login"
