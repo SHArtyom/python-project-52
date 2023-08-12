@@ -207,9 +207,9 @@ msgstr "Пользователи"
 msgid "Logout"
 msgstr "Выход"
 
-#: .\task_manager\templates\base.html:44 .\task_manager\views.py:22
+#: .\task_manager\views.py:22
 msgid "Enter"
-msgstr "Вход"
+msgstr "Войти"
 
 #: .\task_manager\templates\base.html:47 .\task_manager\users\views.py:34
 msgid "Register"
