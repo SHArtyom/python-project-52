@@ -110,7 +110,7 @@ msgstr "Статус успешно создан"
 #: .\task_manager\statuses\views.py:37
 #: .\task_manager\templates\statuses\statuses.html:13
 msgid "Create status"
-msgstr "Создайте статус"
+msgstr "Создать статус"
 
 #: .\task_manager\statuses\views.py:52
 msgid "Status successfully changed"
