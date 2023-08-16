@@ -351,3 +351,7 @@ msgstr "Вход"
 #: .\task_manager\views.py:28 .\task_manager\views.py:31
 msgid "You are logged out"
 msgstr "Вы разлогинены"
+
+#: .\task_manager\tasks\filter.py:17
+msgid "Only own tasks"
+msgstr "Только свои задачи"
