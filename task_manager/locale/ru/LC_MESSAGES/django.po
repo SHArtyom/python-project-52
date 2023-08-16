@@ -114,7 +114,7 @@ msgstr "Создайте статус"
 
 #: .\task_manager\statuses\views.py:52
 msgid "Status successfully changed"
-msgstr "Статус успешно изменён"
+msgstr "Статус успешно изменен"
 
 #: .\task_manager\statuses\views.py:54
 msgid "Change status"
@@ -122,7 +122,7 @@ msgstr "Изменить статус"
 
 #: .\task_manager\statuses\views.py:70
 msgid "Status successfully deleted"
-msgstr "Статус успешно удалён"
+msgstr "Статус успешно удален"
 
 #: .\task_manager\statuses\views.py:71
 msgid "It is not possible to delete a status because it is in use"
@@ -330,7 +330,7 @@ msgstr "Изменить пользователя"
 
 #: .\task_manager\users\views.py:71
 msgid "User is successfully deleted"
-msgstr "Пользователь успешно удалён"
+msgstr "Пользователь успешно удален"
 
 #: .\task_manager\users\views.py:74
 msgid "Unable to delete a user because he is being used"
