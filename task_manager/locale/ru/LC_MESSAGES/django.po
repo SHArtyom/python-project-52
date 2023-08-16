@@ -217,7 +217,7 @@ msgstr "Регистрация"
 
 #: .\task_manager\users\views.py:34
 msgid "Register"
-msgstr "Зарегистрироваться"
+msgstr "Зарегистрировать"
 
 #: .\task_manager\templates\form.html:7
 #: .\task_manager\templates\statuses\delete.html:7
