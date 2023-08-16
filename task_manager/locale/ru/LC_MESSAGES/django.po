@@ -212,8 +212,12 @@ msgid "Enter"
 msgstr "Войти"
 
 #: .\task_manager\templates\base.html:47 .\task_manager\users\views.py:34
-msgid "Register"
+msgid "Sign Up"
 msgstr "Регистрация"
+
+#: .\task_manager\users\views.py:34
+msgid "Register"
+msgstr "Зарегистрироваться"
 
 #: .\task_manager\templates\form.html:7
 #: .\task_manager\templates\statuses\delete.html:7
