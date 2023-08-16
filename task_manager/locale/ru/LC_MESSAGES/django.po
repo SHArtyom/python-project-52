@@ -318,7 +318,7 @@ msgstr "Создать пользователя"
 
 #: .\task_manager\users\views.py:50
 msgid "User is successfully updated"
-msgstr "Пользователь успешно обновлён"
+msgstr "Пользователь успешно изменен"
 
 #: .\task_manager\users\views.py:51 .\task_manager\users\views.py:72
 msgid "You have no rights to change another user."
@@ -326,7 +326,7 @@ msgstr "У вас нет прав для изменения другого по�
 
 #: .\task_manager\users\views.py:54
 msgid "Update user"
-msgstr "Обновить пользователя"
+msgstr "Изменить пользователя"
 
 #: .\task_manager\users\views.py:71
 msgid "User is successfully deleted"
