@@ -254,7 +254,7 @@ msgstr "Вы уверены, что хотите удалить?"
 #: .\task_manager\templates\users\users.html:31
 #: .\task_manager\users\views.py:55
 msgid "Update"
-msgstr "Обновить"
+msgstr "Изменить"
 
 #: .\task_manager\templates\statuses\statuses.html:35
 #: .\task_manager\templates\tasks\task_show.html:60
