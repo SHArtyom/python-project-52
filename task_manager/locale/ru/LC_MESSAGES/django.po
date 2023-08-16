@@ -310,7 +310,7 @@ msgstr "Пароль слишком короткий. Длина пароля д
 
 #: .\task_manager\users\views.py:31
 msgid "User is successfully registered"
-msgstr "Пользователь успешно создан"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: .\task_manager\users\views.py:33
 msgid "Create user"
