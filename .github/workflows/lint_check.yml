@@ -1,4 +1,4 @@
-name: lint_check
+name: Tests and linter
 
 on:
   - push
@@ -21,6 +21,20 @@ jobs:
         run: |
           pip install poetry
           make install
+          pip install coverage
       - name: Run linter
         run: |
           make lint
+      - name: Run Tests
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        run: |
+          make tests
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v5.0.0
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make tests-cov
+          debug: true

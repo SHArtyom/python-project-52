@@ -23,3 +23,6 @@ build: install migrate
 PORT ?= 8000
 start:
 	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
+
+tests-cov:
+	poetry run pytest --cov=task_manager --cov-report xml
