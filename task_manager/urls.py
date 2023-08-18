@@ -3,7 +3,7 @@ from django.urls import path, include
 from task_manager.views import IndexView, UserLoginView, UserLogoutView
 
 
-urlpatterns = (
+urlpatterns = [
     path('', IndexView.as_view(), name='home'),
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
@@ -12,4 +12,4 @@ urlpatterns = (
     path('tasks/', include('task_manager.tasks.urls')),
     path('statuses/', include('task_manager.statuses.urls')),
     path('labels/', include('task_manager.labels.urls')),
-)
+]
