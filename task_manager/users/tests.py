@@ -80,18 +80,15 @@ class TestCreateUser(UserTestCase):
         errors = response.context['form'].errors
         self.assertIn('username', errors)
         self.assertEqual(
-            [_('Ensure this value has at most 150 characters '
-               f'(it has {len(user_data["username"])}).')],
+            [_('Ensure this value has at most 150 characters (it has 160).')],
             errors['username'])
         self.assertIn('first_name', errors)
         self.assertEqual(
-            [_('Ensure this value has at most 150 characters '
-               f'(it has {len(user_data["first_name"])}).')],
+            [_('Ensure this value has at most 150 characters (it has 180).')],
             errors['first_name'])
         self.assertIn('last_name', errors)
         self.assertEqual(
-            [_('Ensure this value has at most 150 characters '
-               f'(it has {len(user_data["last_name"])}).')],
+            [_('Ensure this value has at most 150 characters (it has 160).')],
             errors['last_name'])
         self.assertEqual(response.status_code, 200)
         self.assertEqual(User.objects.count(), self.count)

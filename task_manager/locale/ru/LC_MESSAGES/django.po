@@ -297,8 +297,11 @@ msgstr "Пользователь с таким именем уже сущест�
 
 #: .\task_manager\users\tests.py:83 .\task_manager\users\tests.py:88
 #: .\task_manager\users\tests.py:93
-msgid "Ensure this value has at most 150 characters "
-msgstr "Убедитесь, что это значение содержит не более 150 символов"
+msgid "Ensure this value has at most 150 characters (it has 160)."
+msgstr "Убедитесь, что это значение содержит не более 150 символов (сейчас 160)."
+
+msgid "Ensure this value has at most 150 characters (it has 180)."
+msgstr "Убедитесь, что это значение содержит не более 150 символов (сейчас 180)."
 
 #: .\task_manager\users\tests.py:117
 msgid "The two password fields didn’t match."
