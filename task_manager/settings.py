@@ -25,7 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = 'RENDER' not in os.environ
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.getenv('SECRET_KEY')
 SECRET_KEY = os.getenv('SECRET_KEY') if DEBUG else os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = ['webserver', '127.0.0.1', 'localhost']

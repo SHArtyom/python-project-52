@@ -1,6 +1,6 @@
 ### Status badges:
 [![Actions Status](https://github.com/SHArtyom/python-project-52/workflows/hexlet-check/badge.svg)](https://github.com/SHArtyom/python-project-52/actions)
-[![lint_check](https://github.com/SHArtyom/python-project-52/actions/workflows/lint_check.yml/badge.svg)](https://github.com/SHArtyom/python-project-52/actions/workflows/lint_check.yml)
+[![Tests and linter](https://github.com/SHArtyom/python-project-52/actions/workflows/Tests%20and%20linter.yml/badge.svg)](https://github.com/SHArtyom/python-project-52/actions/workflows/Tests%20and%20linter.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/fede384f0b607f81c238/maintainability)](https://codeclimate.com/github/SHArtyom/python-project-52/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/fede384f0b607f81c238/test_coverage)](https://codeclimate.com/github/SHArtyom/python-project-52/test_coverage)
 # Task manager
