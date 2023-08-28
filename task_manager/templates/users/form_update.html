@@ -1,0 +1,16 @@
+{% extends "base_form.html" %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Update user' %} | {% trans 'Task manager' %}
+{% endblock %}
+
+{% block header %}
+    {% trans 'Update user' %}
+{% endblock %}
+
+{% block button %}
+    <button type="submit" class="btn btn-primary">{% trans 'Update' %}</button>
+{% endblock %}

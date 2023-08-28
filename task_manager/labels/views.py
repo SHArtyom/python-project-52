@@ -9,36 +9,28 @@ from .forms import LabelForm
 
 
 class LabelsListView(AuthRequiredMixin, ListView):
+
     template_name = 'labels/labels.html'
     model = Label
     context_object_name = 'labels'
-    extra_context = {
-        'title': _('Labels')
-    }
 
 
 class LabelCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
-    template_name = 'form.html'
+
+    template_name = 'labels/form_create.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy('labels')
     success_message = _('Label successfully created')
-    extra_context = {
-        'title': _('Create label'),
-        'button_text': _('Create'),
-    }
 
 
 class LabelUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
-    template_name = 'form.html'
+
+    template_name = 'labels/form_update.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy('labels')
     success_message = _('Label successfully changed')
-    extra_context = {
-        'title': _('Change label'),
-        'button_text': _('Change'),
-    }
 
 
 class LabelDeleteView(AuthRequiredMixin, DeleteProtectionMixin,
@@ -51,7 +43,3 @@ class LabelDeleteView(AuthRequiredMixin, DeleteProtectionMixin,
     protected_message = _('It is not possible to delete a label '
                           'because it is in use')
     protected_url = reverse_lazy('labels')
-    extra_context = {
-        'title': _('Delete label'),
-        'button_text': _('Yes, delete'),
-    }

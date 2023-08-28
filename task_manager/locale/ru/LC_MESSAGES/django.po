@@ -246,7 +246,7 @@ msgstr "Узнать больше"
 #: .\task_manager\templates\tasks\delete.html:14
 #: .\task_manager\templates\users\delete.html:12
 msgid "Are you sure you want to delete"
-msgstr "Вы уверены, что хотите удалить?"
+msgstr "Вы уверены, что хотите удалить"
 
 #: .\task_manager\templates\statuses\statuses.html:33
 #: .\task_manager\templates\tasks\task_show.html:58

@@ -4,11 +4,11 @@
 {% load i18n %}
 
 {% block title %}
-    {{ task.name }} | {% trans 'Task Manager' %}
+    {% trans 'Task preview' %} | {% trans 'Task Manager' %}
 {% endblock %}
 
 {% block content %}
-    <h1 class="my-4">{{ title }}</h1>
+    <h1 class="my-4">{% trans 'Task preview' %}</h1>
 
     <div class="card">
         <div class="card-header bg-secondary text-white">
