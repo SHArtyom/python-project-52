@@ -33,7 +33,6 @@ class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('tasks')
     success_message = _('Task successfully created')
 
-
     def form_valid(self, form):
         user = self.request.user
         form.instance.author = User.objects.get(pk=user.pk)
