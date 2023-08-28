@@ -55,6 +55,7 @@ class DeleteProtectionMixin(DeletionMixin):
             messages.error(request, self.protected_message)
             return redirect(self.protected_url)
 
+
 class AuthorDeletionMixin(UserPassesTestMixin):
     """
     Authorisation check.

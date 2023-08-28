@@ -35,7 +35,6 @@ class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
 
 
     def form_valid(self, form):
-
         user = self.request.user
         form.instance.author = User.objects.get(pk=user.pk)
         return super().form_valid(form)
