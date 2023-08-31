@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import ProtectedError
 from django.shortcuts import redirect
 from django.utils.translation import gettext as _
-from django.views.generic.edit import DeletionMixin
+from django.views.generic.edit import BaseDeleteView
 
 
 class AuthRequiredMixin(LoginRequiredMixin):
@@ -38,7 +38,8 @@ class UserPermissionMixin(UserPassesTestMixin):
         return redirect(self.permission_url)
 
 
-class DeleteProtectionMixin(DeletionMixin):
+class DeleteProtectionMixin(BaseDeleteView):
+
     """
     Association check.
     Prohibits deleting an object if it is used by other objects.
@@ -46,14 +47,13 @@ class DeleteProtectionMixin(DeletionMixin):
     protected_message = None
     protected_url = None
 
-    def form_valid(self, request, *args, **kwargs):
+    def form_valid(self, form):
         try:
-            super().delete(self.request, *args, **kwargs)
-            messages.info(self.request, self.success_message)
-            return redirect(self.success_url)
+            self.object.delete()
         except ProtectedError:
-            messages.error(request, self.protected_message)
-            return redirect(self.protected_url)
+            messages.error(self.request, self.protected_message)
+            redirect(self.protected_url)
+        return redirect(self.get_success_url())
 
 
 class AuthorDeletionMixin(UserPassesTestMixin):
