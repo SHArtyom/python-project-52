@@ -53,7 +53,9 @@ class DeleteProtectionMixin(BaseDeleteView):
         except ProtectedError:
             messages.error(self.request, self.protected_message)
             redirect(self.protected_url)
-        return redirect(self.get_success_url())
+        else:
+            messages.success(self.request, self.success_message)
+        return redirect(self.success_url)
 
 
 class AuthorDeletionMixin(UserPassesTestMixin):
